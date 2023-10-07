@@ -1,1 +1,75 @@
-D
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Sep 19, 2023 at 05:55 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.0.28
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `car`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cars`
+--
+
+CREATE TABLE `cars` (
+  `car_name` varchar(100) NOT NULL,
+  `price` varchar(100) NOT NULL,
+  `top_speed` varchar(100) NOT NULL,
+  `car_type` varchar(100) NOT NULL,
+  `image_path` blob DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `cars`
+--
+
+INSERT INTO `cars` (`car_name`, `price`, `top_speed`, `car_type`, `image_path`) VALUES
+('nexon', '780000', '190', 'Luxury Car', 0x75706c6f6164732f363530396236323932356230315f646f776e6c6f6164202833292e6a7067),
+('Swift Dezire', '550000', '160', 'Luxury Car', 0x75706c6f6164732f363530396237313135653632655f646f776e6c6f61642e6a7067),
+('i20', '500000', '170', 'Luxury Car', 0x75706c6f6164732f363530396237353635393838385f646f776e6c6f6164202834292e6a7067),
+('innova', '1800000', '201', 'Sports Car', 0x75706c6f6164732f363530396263666162613833335f646f776e6c6f6164202832292e6a7067);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `userregistration`
+--
+
+CREATE TABLE `userregistration` (
+  `username` varchar(100) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  `conformpasswod` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `userregistration`
+--
+
+INSERT INTO `userregistration` (`username`, `email`, `password`, `conformpasswod`) VALUES
+('kiran', '2065kiran@gmail.com', 'jk@#1234', 'jk@#1234'),
+('jk', '2066kiran@gmail.com', 'Jk@#1234', ''),
+('pk', 'pk@gmail.com', 'jk@#1234', ''),
+('shrikant', 'shrikant@gmail.com', 'shrikant', '');
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
